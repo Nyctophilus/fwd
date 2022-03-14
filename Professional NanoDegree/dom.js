@@ -2,7 +2,7 @@
 	Node interface
 	Element interface
 
-	EventTarget <-- Node <-- Element 
+	hl EventTarget <-- Node <-- Element 
 */
 
 /*
