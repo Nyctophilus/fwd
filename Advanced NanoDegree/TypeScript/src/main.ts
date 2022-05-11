@@ -131,3 +131,25 @@ class Student {
 
   protected nickname: "string" | undefined; // can be accessed from parent class and child classes
 }
+
+/*
+	Generics
+*/
+
+// <T> is the generic type param
+const getItemString = <T>(arr: T[]): T => {
+  return arr[1];
+};
+
+console.log(getItemString(["cat", "dog"]));
+
+console.log(getItemString<number>([22, 0])); // Explicitly typed as a number
+
+/*
+	Promises
+*/
+
+const myFunc = async (step: unknown): Promise<number> => {
+  // do stuff
+  return 0;
+};
