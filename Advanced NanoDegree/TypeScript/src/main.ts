@@ -153,3 +153,13 @@ const myFunc = async (step: unknown): Promise<number> => {
   // do stuff
   return 0;
 };
+
+/*
+	for jasmine testing
+*/
+
+const myFunc2 = (num: number): number => {
+  return num * num;
+};
+
+export default myFunc2;
