@@ -72,3 +72,17 @@
 		.toBeNull()
 		.toBeNan()
 */
+
+/*
+	FIXME Example: async/await
+
+	it('expects asyncFun() result to equal value',
+	async () =>{
+	const result=await asyncFun();
+	expect(result).toEqual(value);
+	});
+*/
+
+// .toBeResolved() tests ifaPromise is resolved
+// .toBeRejected() tests ifaPromise is rejected
+// .toBeRejectedWith(expected value) tests if the expected error is returned
