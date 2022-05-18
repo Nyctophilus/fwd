@@ -1,5 +1,7 @@
-import express from "express";
+import express, { json } from "express";
 import APIroutes from "./routes";
+import { promises as fsPromises } from "fs";
+import csv from "csvtojson";
 
 const app = express();
 
@@ -8,7 +10,54 @@ app.listen(port, () => {
   console.log(`server is running at localhost:${port}`);
 });
 
-app.use("/api", APIroutes);
+const inputFile = "./users.csv",
+  outputFile = "users.json";
+
+app.get("/convert", (req, res) => {
+  res.send("Conversion In Process!");
+
+  csv()
+    .fromFile(inputFile)
+    .then((data) => {
+      let newData = data.map(
+        (item: {
+          first_name: string;
+          last_name: string;
+          phone: string;
+        }) => {
+          let first = item.first_name,
+            last = item.last_name,
+            phone = item.phone;
+
+          if (!phone) phone = "missing data!";
+
+          return { first, last, phone };
+        }
+      );
+      fsPromises.writeFile(
+        outputFile,
+        JSON.stringify(newData)
+      );
+    });
+});
+
+// app.use("/api", APIroutes);
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
 
 /*		-HL req,res
 
