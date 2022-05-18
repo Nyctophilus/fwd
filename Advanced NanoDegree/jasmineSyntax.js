@@ -1,3 +1,13 @@
+// npm i --save-dev jasmine @types/jasmine
+
+// create script 'test':'jasmine'
+
+// npm test init .. to create the spec folder
+
+/*
+	-HL Syntax
+*/
+
 // describe(“suite description”, () => {
 //     it(“describes the spec”, () => {
 //         const myVar = true;
