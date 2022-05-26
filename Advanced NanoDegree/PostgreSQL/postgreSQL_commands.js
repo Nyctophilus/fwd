@@ -19,6 +19,17 @@ return to the db after quitting: psql my_new_db          === psql postgres && \c
 
 /*
 
+
+	`CREATE USER full_stack_user WITH PASSWORD 'password123';`
+  	`CREATE DATABASE full_stack_dev;`
+  	`\c full_stack_dev`
+
+
+
+*/
+
+/*
+
 CREATE TABLE [IF NOT EXISTS] <table_name> (
 	id SERIAL PRIMARY KEY,    ===> special postgres type for uniques, auto incrementing 
 	name VARCHAR(100),
