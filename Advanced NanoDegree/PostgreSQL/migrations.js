@@ -1,4 +1,7 @@
 /*
+Migration - The record of a database schema change that also includes the logic to enact and rollback that change.
+
+
 
 Install the global package 							npm install -g db-migrate
 Install the package to the project 					yarn add db-migrate db-migrate-pg
